@@ -5,7 +5,7 @@ while(i <= n && j <= m)
         c[p++] = a[i++];
     else if(a[i] > b[j])
         c[p++] = b[j++];
-    else
+    else // daca este egal, nu se repeta (i++ sau j++, irelevant)
         i++;
 while(i <= n)
     c[p++] = a[i++];
