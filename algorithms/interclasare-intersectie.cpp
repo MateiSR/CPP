@@ -1,10 +1,13 @@
     p = 0;
-    i = 1 , j = 1;
+    int i = 0, j = 0;
     while(i <= n && j <= m)
-        if(a[i] < b[j])
-            i++;
+        if(a[i]<b[j])
+            c[p++] = a[i++];
+        else if(a[i] > b[j])
+            c[p++] = b[j++];
         else
-            if(a[i] > b[j])
-                j++;
-            else
-                c[++p] = a[i], i++, j++;
+            i++;
+    while(i <= n)
+        c[p++] = a[i++];
+    while(j <= m)
+        c[p++] = b[j++];
